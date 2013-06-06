@@ -3,7 +3,6 @@ class UserMailer < ActionMailer::Base
 
   def ticket_email(ticket)
     @ticket = ticket
-
     mail(to: "helpdesk@example.com", subject: "Ticket Content")
   end
 
