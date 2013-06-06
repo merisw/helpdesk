@@ -6,10 +6,4 @@ class UserMailer < ActionMailer::Base
     mail(to: "helpdesk@example.com", subject: ticket.name)
   end
 
-  def receive(email)
-    ticket = Ticket.find_by_name(email.subject)
-    ticket.response = email.text
-    ticket.save
-  end
-
 end

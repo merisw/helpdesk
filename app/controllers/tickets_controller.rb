@@ -34,4 +34,10 @@ class TicketsController < ApplicationController
     end
   end
 
+  def receive
+    ticket = Ticket.find_by_name(params[:subject])
+    ticket.response = params[:text]
+    ticket.save
+  end
+
 end
