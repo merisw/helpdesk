@@ -1,4 +1,6 @@
 class TicketsController < ApplicationController
+  skip_before_filter :verify_authenticity_token, only: [:receive]
+
   def index
     @tickets = Ticket.all
   end
@@ -38,6 +40,8 @@ class TicketsController < ApplicationController
     ticket = Ticket.find_by_name(params[:headers][:Subject])
     ticket.response = params[:plain]
     ticket.save
+
+    render text: 'success', status: 200
   end
 
 end
