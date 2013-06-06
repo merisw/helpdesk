@@ -1,0 +1,12 @@
+<%= form_for(@ticket) do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :cost %><br />
+    <%= f.number_field :cost %>
+  </p>
+  <%= f.submit %>
+<% end %>

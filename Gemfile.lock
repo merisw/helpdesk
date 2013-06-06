@@ -69,6 +69,7 @@ GEM
     mime-types (1.23)
     multi_json (1.7.6)
     nokogiri (1.5.9)
+    pg (0.14.1)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -149,6 +150,7 @@ DEPENDENCIES
   email_spec (= 1.2.1)
   factory_girl (= 2.6.4)
   jquery-rails
+  pg
   rails (= 3.2.13)
   rspec-rails (~> 2.11)
   sass-rails (~> 3.2.3)
