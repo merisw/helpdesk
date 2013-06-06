@@ -8,7 +8,7 @@ class UserMailer < ActionMailer::Base
 
   def receive(email)
     ticket = Ticket.find_by_name(email.subject)
-    ticket.response = email.body
+    ticket.response = email.text
     ticket.save
   end
 
